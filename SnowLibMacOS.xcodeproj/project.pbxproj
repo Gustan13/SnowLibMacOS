@@ -1,0 +1,658 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 56;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		523357FC2CDCFB61007A61F0 /* Collider.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 523357BB2CDCFB61007A61F0 /* Collider.cpp */; };
+		523357FD2CDCFB61007A61F0 /* CollisionManager.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 523357BC2CDCFB61007A61F0 /* CollisionManager.cpp */; };
+		523357FE2CDCFB61007A61F0 /* Input.mm in Sources */ = {isa = PBXBuildFile; fileRef = 523357BE2CDCFB61007A61F0 /* Input.mm */; };
+		523358002CDCFB61007A61F0 /* SnowSoup.mm in Sources */ = {isa = PBXBuildFile; fileRef = 523357C02CDCFB61007A61F0 /* SnowSoup.mm */; };
+		523358022CDCFB61007A61F0 /* DirectionalLight.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 523357C32CDCFB61007A61F0 /* DirectionalLight.cpp */; };
+		523358032CDCFB61007A61F0 /* Cube.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 523357C52CDCFB61007A61F0 /* Cube.cpp */; };
+		523358042CDCFB61007A61F0 /* Mesh.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 523357C62CDCFB61007A61F0 /* Mesh.cpp */; };
+		523358052CDCFB61007A61F0 /* Model.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 523357C72CDCFB61007A61F0 /* Model.cpp */; };
+		523358062CDCFB61007A61F0 /* MeshNode.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 523357C92CDCFB61007A61F0 /* MeshNode.cpp */; };
+		523358072CDCFB61007A61F0 /* Node.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 523357CA2CDCFB61007A61F0 /* Node.cpp */; };
+		523358082CDCFB61007A61F0 /* ModelTest.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 523357CC2CDCFB61007A61F0 /* ModelTest.cpp */; };
+		523358092CDCFB61007A61F0 /* MovingCollider.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 523357CD2CDCFB61007A61F0 /* MovingCollider.cpp */; };
+		5233580A2CDCFB61007A61F0 /* Renderer.mm in Sources */ = {isa = PBXBuildFile; fileRef = 523357CF2CDCFB61007A61F0 /* Renderer.mm */; };
+		5233580B2CDCFB61007A61F0 /* PhongShader.metal in Sources */ = {isa = PBXBuildFile; fileRef = 523357D12CDCFB61007A61F0 /* PhongShader.metal */; };
+		5233580C2CDCFB61007A61F0 /* Shaders.metal in Sources */ = {isa = PBXBuildFile; fileRef = 523357D22CDCFB61007A61F0 /* Shaders.metal */; };
+		5233580D2CDCFB61007A61F0 /* Skybox.metal in Sources */ = {isa = PBXBuildFile; fileRef = 523357D32CDCFB61007A61F0 /* Skybox.metal */; };
+		5233580E2CDCFB61007A61F0 /* STBI_Implementation.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 523357D52CDCFB61007A61F0 /* STBI_Implementation.cpp */; };
+		5233580F2CDCFB61007A61F0 /* Texture.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 523357D62CDCFB61007A61F0 /* Texture.cpp */; };
+		523358102CDCFB61007A61F0 /* Camera.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 523357D82CDCFB61007A61F0 /* Camera.cpp */; };
+		523358112CDCFB61007A61F0 /* Transform.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 523357DA2CDCFB61007A61F0 /* Transform.cpp */; };
+		523358122CDCFB61007A61F0 /* Camera.hpp in Headers */ = {isa = PBXBuildFile; fileRef = 523357DD2CDCFB61007A61F0 /* Camera.hpp */; settings = {ATTRIBUTES = (Public, ); }; };
+		523358132CDCFB61007A61F0 /* Collider.hpp in Headers */ = {isa = PBXBuildFile; fileRef = 523357DE2CDCFB61007A61F0 /* Collider.hpp */; settings = {ATTRIBUTES = (Public, ); }; };
+		523358142CDCFB61007A61F0 /* CollisionManager.hpp in Headers */ = {isa = PBXBuildFile; fileRef = 523357DF2CDCFB61007A61F0 /* CollisionManager.hpp */; settings = {ATTRIBUTES = (Public, ); }; };
+		523358152CDCFB61007A61F0 /* Cube.hpp in Headers */ = {isa = PBXBuildFile; fileRef = 523357E02CDCFB61007A61F0 /* Cube.hpp */; settings = {ATTRIBUTES = (Public, ); }; };
+		523358162CDCFB61007A61F0 /* DirectionalLight.hpp in Headers */ = {isa = PBXBuildFile; fileRef = 523357E12CDCFB61007A61F0 /* DirectionalLight.hpp */; settings = {ATTRIBUTES = (Public, ); }; };
+		523358172CDCFB61007A61F0 /* Input.h in Headers */ = {isa = PBXBuildFile; fileRef = 523357E22CDCFB61007A61F0 /* Input.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		523358182CDCFB61007A61F0 /* Mesh.hpp in Headers */ = {isa = PBXBuildFile; fileRef = 523357E32CDCFB61007A61F0 /* Mesh.hpp */; settings = {ATTRIBUTES = (Public, ); }; };
+		523358192CDCFB61007A61F0 /* MeshNode.hpp in Headers */ = {isa = PBXBuildFile; fileRef = 523357E42CDCFB61007A61F0 /* MeshNode.hpp */; settings = {ATTRIBUTES = (Public, ); }; };
+		5233581B2CDCFB61007A61F0 /* Model.hpp in Headers */ = {isa = PBXBuildFile; fileRef = 523357E62CDCFB61007A61F0 /* Model.hpp */; settings = {ATTRIBUTES = (Public, ); }; };
+		5233581C2CDCFB61007A61F0 /* ModelTest.hpp in Headers */ = {isa = PBXBuildFile; fileRef = 523357E72CDCFB61007A61F0 /* ModelTest.hpp */; settings = {ATTRIBUTES = (Public, ); }; };
+		5233581D2CDCFB61007A61F0 /* MovingCollider.hpp in Headers */ = {isa = PBXBuildFile; fileRef = 523357E82CDCFB61007A61F0 /* MovingCollider.hpp */; settings = {ATTRIBUTES = (Public, ); }; };
+		5233581E2CDCFB61007A61F0 /* Node.hpp in Headers */ = {isa = PBXBuildFile; fileRef = 523357E92CDCFB61007A61F0 /* Node.hpp */; settings = {ATTRIBUTES = (Public, ); }; };
+		5233581F2CDCFB61007A61F0 /* OrthographicCamera.hpp in Headers */ = {isa = PBXBuildFile; fileRef = 523357EA2CDCFB61007A61F0 /* OrthographicCamera.hpp */; settings = {ATTRIBUTES = (Public, ); }; };
+		523358202CDCFB61007A61F0 /* PerspectiveCamera.hpp in Headers */ = {isa = PBXBuildFile; fileRef = 523357EB2CDCFB61007A61F0 /* PerspectiveCamera.hpp */; settings = {ATTRIBUTES = (Public, ); }; };
+		523358212CDCFB61007A61F0 /* Renderer.hpp in Headers */ = {isa = PBXBuildFile; fileRef = 523357EC2CDCFB61007A61F0 /* Renderer.hpp */; settings = {ATTRIBUTES = (Public, ); }; };
+		523358222CDCFB61007A61F0 /* Snow.hpp in Headers */ = {isa = PBXBuildFile; fileRef = 523357ED2CDCFB61007A61F0 /* Snow.hpp */; settings = {ATTRIBUTES = (Public, ); }; };
+		523358232CDCFB61007A61F0 /* SnowDefs.h in Headers */ = {isa = PBXBuildFile; fileRef = 523357EE2CDCFB61007A61F0 /* SnowDefs.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		523358242CDCFB61007A61F0 /* SnowInputs.h in Headers */ = {isa = PBXBuildFile; fileRef = 523357EF2CDCFB61007A61F0 /* SnowInputs.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		523358252CDCFB61007A61F0 /* SnowSoup.hpp in Headers */ = {isa = PBXBuildFile; fileRef = 523357F02CDCFB61007A61F0 /* SnowSoup.hpp */; settings = {ATTRIBUTES = (Public, ); }; };
+		523358262CDCFB61007A61F0 /* SnowStructs.h in Headers */ = {isa = PBXBuildFile; fileRef = 523357F12CDCFB61007A61F0 /* SnowStructs.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		523358272CDCFB61007A61F0 /* Texture.hpp in Headers */ = {isa = PBXBuildFile; fileRef = 523357F22CDCFB61007A61F0 /* Texture.hpp */; settings = {ATTRIBUTES = (Public, ); }; };
+		523358282CDCFB61007A61F0 /* Transform.hpp in Headers */ = {isa = PBXBuildFile; fileRef = 523357F32CDCFB61007A61F0 /* Transform.hpp */; settings = {ATTRIBUTES = (Public, ); }; };
+		523358292CDCFB61007A61F0 /* WindowDelegate.hpp in Headers */ = {isa = PBXBuildFile; fileRef = 523357F42CDCFB61007A61F0 /* WindowDelegate.hpp */; settings = {ATTRIBUTES = (Public, ); }; };
+		5233582A2CDCFB61007A61F0 /* Implementation.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 523357F72CDCFB61007A61F0 /* Implementation.cpp */; };
+		5233582C2CDCFB61007A61F0 /* SnowLib.h in Headers */ = {isa = PBXBuildFile; fileRef = 523357F92CDCFB61007A61F0 /* SnowLib.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		5233582D2CDCFB61007A61F0 /* SnowLib.m in Sources */ = {isa = PBXBuildFile; fileRef = 523357FA2CDCFB61007A61F0 /* SnowLib.m */; };
+		523358312CDCFB7F007A61F0 /* Metal.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5233582F2CDCFB7F007A61F0 /* Metal.framework */; };
+		523358322CDCFB7F007A61F0 /* MetalKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 523358302CDCFB7F007A61F0 /* MetalKit.framework */; settings = {ATTRIBUTES = (Required, ); }; };
+		523358342CDCFB83007A61F0 /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 523358332CDCFB83007A61F0 /* QuartzCore.framework */; };
+		523358362CDCFB89007A61F0 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 523358352CDCFB89007A61F0 /* Foundation.framework */; };
+		523358382CDCFBB6007A61F0 /* libccd.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 523358372CDCFBB6007A61F0 /* libccd.a */; };
+		52DC22A02CDFDCB10043D33D /* libassimp.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 52DC20722CDED1CC0043D33D /* libassimp.a */; };
+		52DC22A22CDFDCDC0043D33D /* libz.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 52DC22A12CDFDCDC0043D33D /* libz.a */; };
+		52DDC9CE2CE158BA00D7E555 /* SnowView.mm in Sources */ = {isa = PBXBuildFile; fileRef = 52DDC9CD2CE158BA00D7E555 /* SnowView.mm */; };
+		52DDC9CF2CE158BA00D7E555 /* SnowView.h in Headers */ = {isa = PBXBuildFile; fileRef = 52DDC9CC2CE158BA00D7E555 /* SnowView.h */; settings = {ATTRIBUTES = (Public, ); }; };
+/* End PBXBuildFile section */
+
+/* Begin PBXFileReference section */
+		523355B02CDCFAF5007A61F0 /* libSnowLibMacOS.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libSnowLibMacOS.a; sourceTree = BUILT_PRODUCTS_DIR; };
+		523357BB2CDCFB61007A61F0 /* Collider.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = Collider.cpp; sourceTree = "<group>"; };
+		523357BC2CDCFB61007A61F0 /* CollisionManager.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = CollisionManager.cpp; sourceTree = "<group>"; };
+		523357BE2CDCFB61007A61F0 /* Input.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; path = Input.mm; sourceTree = "<group>"; };
+		523357C02CDCFB61007A61F0 /* SnowSoup.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; path = SnowSoup.mm; sourceTree = "<group>"; };
+		523357C32CDCFB61007A61F0 /* DirectionalLight.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = DirectionalLight.cpp; sourceTree = "<group>"; };
+		523357C52CDCFB61007A61F0 /* Cube.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = Cube.cpp; sourceTree = "<group>"; };
+		523357C62CDCFB61007A61F0 /* Mesh.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = Mesh.cpp; sourceTree = "<group>"; };
+		523357C72CDCFB61007A61F0 /* Model.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = Model.cpp; sourceTree = "<group>"; };
+		523357C92CDCFB61007A61F0 /* MeshNode.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = MeshNode.cpp; sourceTree = "<group>"; };
+		523357CA2CDCFB61007A61F0 /* Node.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = Node.cpp; sourceTree = "<group>"; };
+		523357CC2CDCFB61007A61F0 /* ModelTest.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = ModelTest.cpp; sourceTree = "<group>"; };
+		523357CD2CDCFB61007A61F0 /* MovingCollider.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = MovingCollider.cpp; sourceTree = "<group>"; };
+		523357CF2CDCFB61007A61F0 /* Renderer.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; path = Renderer.mm; sourceTree = "<group>"; };
+		523357D12CDCFB61007A61F0 /* PhongShader.metal */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.metal; path = PhongShader.metal; sourceTree = "<group>"; };
+		523357D22CDCFB61007A61F0 /* Shaders.metal */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.metal; path = Shaders.metal; sourceTree = "<group>"; };
+		523357D32CDCFB61007A61F0 /* Skybox.metal */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.metal; path = Skybox.metal; sourceTree = "<group>"; };
+		523357D52CDCFB61007A61F0 /* STBI_Implementation.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = STBI_Implementation.cpp; sourceTree = "<group>"; };
+		523357D62CDCFB61007A61F0 /* Texture.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = Texture.cpp; sourceTree = "<group>"; };
+		523357D82CDCFB61007A61F0 /* Camera.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = Camera.cpp; sourceTree = "<group>"; };
+		523357DA2CDCFB61007A61F0 /* Transform.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = Transform.cpp; sourceTree = "<group>"; };
+		523357DD2CDCFB61007A61F0 /* Camera.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = Camera.hpp; sourceTree = "<group>"; };
+		523357DE2CDCFB61007A61F0 /* Collider.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = Collider.hpp; sourceTree = "<group>"; };
+		523357DF2CDCFB61007A61F0 /* CollisionManager.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = CollisionManager.hpp; sourceTree = "<group>"; };
+		523357E02CDCFB61007A61F0 /* Cube.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = Cube.hpp; sourceTree = "<group>"; };
+		523357E12CDCFB61007A61F0 /* DirectionalLight.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = DirectionalLight.hpp; sourceTree = "<group>"; };
+		523357E22CDCFB61007A61F0 /* Input.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Input.h; sourceTree = "<group>"; };
+		523357E32CDCFB61007A61F0 /* Mesh.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = Mesh.hpp; sourceTree = "<group>"; };
+		523357E42CDCFB61007A61F0 /* MeshNode.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = MeshNode.hpp; sourceTree = "<group>"; };
+		523357E62CDCFB61007A61F0 /* Model.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = Model.hpp; sourceTree = "<group>"; };
+		523357E72CDCFB61007A61F0 /* ModelTest.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = ModelTest.hpp; sourceTree = "<group>"; };
+		523357E82CDCFB61007A61F0 /* MovingCollider.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = MovingCollider.hpp; sourceTree = "<group>"; };
+		523357E92CDCFB61007A61F0 /* Node.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = Node.hpp; sourceTree = "<group>"; };
+		523357EA2CDCFB61007A61F0 /* OrthographicCamera.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = OrthographicCamera.hpp; sourceTree = "<group>"; };
+		523357EB2CDCFB61007A61F0 /* PerspectiveCamera.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = PerspectiveCamera.hpp; sourceTree = "<group>"; };
+		523357EC2CDCFB61007A61F0 /* Renderer.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = Renderer.hpp; sourceTree = "<group>"; };
+		523357ED2CDCFB61007A61F0 /* Snow.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = Snow.hpp; sourceTree = "<group>"; };
+		523357EE2CDCFB61007A61F0 /* SnowDefs.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SnowDefs.h; sourceTree = "<group>"; };
+		523357EF2CDCFB61007A61F0 /* SnowInputs.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SnowInputs.h; sourceTree = "<group>"; };
+		523357F02CDCFB61007A61F0 /* SnowSoup.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = SnowSoup.hpp; sourceTree = "<group>"; };
+		523357F12CDCFB61007A61F0 /* SnowStructs.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SnowStructs.h; sourceTree = "<group>"; };
+		523357F22CDCFB61007A61F0 /* Texture.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = Texture.hpp; sourceTree = "<group>"; };
+		523357F32CDCFB61007A61F0 /* Transform.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = Transform.hpp; sourceTree = "<group>"; };
+		523357F42CDCFB61007A61F0 /* WindowDelegate.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = WindowDelegate.hpp; sourceTree = "<group>"; };
+		523357F72CDCFB61007A61F0 /* Implementation.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = Implementation.cpp; sourceTree = "<group>"; };
+		523357F92CDCFB61007A61F0 /* SnowLib.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SnowLib.h; sourceTree = "<group>"; };
+		523357FA2CDCFB61007A61F0 /* SnowLib.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SnowLib.m; sourceTree = "<group>"; };
+		5233582F2CDCFB7F007A61F0 /* Metal.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Metal.framework; path = System/Library/Frameworks/Metal.framework; sourceTree = SDKROOT; };
+		523358302CDCFB7F007A61F0 /* MetalKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MetalKit.framework; path = System/Library/Frameworks/MetalKit.framework; sourceTree = SDKROOT; };
+		523358332CDCFB83007A61F0 /* QuartzCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = QuartzCore.framework; path = System/Library/Frameworks/QuartzCore.framework; sourceTree = SDKROOT; };
+		523358352CDCFB89007A61F0 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
+		523358372CDCFBB6007A61F0 /* libccd.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = libccd.a; path = ccd/lib/libccd.a; sourceTree = "<group>"; };
+		52DC20632CDE395C0043D33D /* assimp.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = assimp.framework; sourceTree = "<group>"; };
+		52DC20722CDED1CC0043D33D /* libassimp.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; path = libassimp.a; sourceTree = "<group>"; };
+		52DC22A12CDFDCDC0043D33D /* libz.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = libz.a; path = ../../../../../../opt/homebrew/Cellar/zlib/1.3.1/lib/libz.a; sourceTree = "<group>"; };
+		52DDC9CC2CE158BA00D7E555 /* SnowView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SnowView.h; sourceTree = "<group>"; };
+		52DDC9CD2CE158BA00D7E555 /* SnowView.mm */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.objcpp; path = SnowView.mm; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		523355AE2CDCFAF5007A61F0 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				52DC22A22CDFDCDC0043D33D /* libz.a in Frameworks */,
+				52DC22A02CDFDCB10043D33D /* libassimp.a in Frameworks */,
+				523358382CDCFBB6007A61F0 /* libccd.a in Frameworks */,
+				523358362CDCFB89007A61F0 /* Foundation.framework in Frameworks */,
+				523358342CDCFB83007A61F0 /* QuartzCore.framework in Frameworks */,
+				523358312CDCFB7F007A61F0 /* Metal.framework in Frameworks */,
+				523358322CDCFB7F007A61F0 /* MetalKit.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		523355A72CDCFAF5007A61F0 = {
+			isa = PBXGroup;
+			children = (
+				523357FB2CDCFB61007A61F0 /* SnowLib */,
+				523355B12CDCFAF5007A61F0 /* Products */,
+				5233582E2CDCFB7F007A61F0 /* Frameworks */,
+			);
+			sourceTree = "<group>";
+		};
+		523355B12CDCFAF5007A61F0 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				523355B02CDCFAF5007A61F0 /* libSnowLibMacOS.a */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		523357BD2CDCFB61007A61F0 /* Colliders */ = {
+			isa = PBXGroup;
+			children = (
+				523357BB2CDCFB61007A61F0 /* Collider.cpp */,
+				523357BC2CDCFB61007A61F0 /* CollisionManager.cpp */,
+			);
+			path = Colliders;
+			sourceTree = "<group>";
+		};
+		523357C22CDCFB61007A61F0 /* Control */ = {
+			isa = PBXGroup;
+			children = (
+				52DDC9CD2CE158BA00D7E555 /* SnowView.mm */,
+				523357BE2CDCFB61007A61F0 /* Input.mm */,
+				523357C02CDCFB61007A61F0 /* SnowSoup.mm */,
+			);
+			path = Control;
+			sourceTree = "<group>";
+		};
+		523357C42CDCFB61007A61F0 /* Light */ = {
+			isa = PBXGroup;
+			children = (
+				523357C32CDCFB61007A61F0 /* DirectionalLight.cpp */,
+			);
+			path = Light;
+			sourceTree = "<group>";
+		};
+		523357C82CDCFB61007A61F0 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				523357C52CDCFB61007A61F0 /* Cube.cpp */,
+				523357C62CDCFB61007A61F0 /* Mesh.cpp */,
+				523357C72CDCFB61007A61F0 /* Model.cpp */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		523357CB2CDCFB61007A61F0 /* Nodes */ = {
+			isa = PBXGroup;
+			children = (
+				523357C92CDCFB61007A61F0 /* MeshNode.cpp */,
+				523357CA2CDCFB61007A61F0 /* Node.cpp */,
+			);
+			path = Nodes;
+			sourceTree = "<group>";
+		};
+		523357CE2CDCFB61007A61F0 /* Players */ = {
+			isa = PBXGroup;
+			children = (
+				523357CC2CDCFB61007A61F0 /* ModelTest.cpp */,
+				523357CD2CDCFB61007A61F0 /* MovingCollider.cpp */,
+			);
+			path = Players;
+			sourceTree = "<group>";
+		};
+		523357D02CDCFB61007A61F0 /* Renderer */ = {
+			isa = PBXGroup;
+			children = (
+				523357CF2CDCFB61007A61F0 /* Renderer.mm */,
+			);
+			path = Renderer;
+			sourceTree = "<group>";
+		};
+		523357D42CDCFB61007A61F0 /* Shaders */ = {
+			isa = PBXGroup;
+			children = (
+				523357D12CDCFB61007A61F0 /* PhongShader.metal */,
+				523357D22CDCFB61007A61F0 /* Shaders.metal */,
+				523357D32CDCFB61007A61F0 /* Skybox.metal */,
+			);
+			path = Shaders;
+			sourceTree = "<group>";
+		};
+		523357D72CDCFB61007A61F0 /* Texture */ = {
+			isa = PBXGroup;
+			children = (
+				523357D52CDCFB61007A61F0 /* STBI_Implementation.cpp */,
+				523357D62CDCFB61007A61F0 /* Texture.cpp */,
+			);
+			path = Texture;
+			sourceTree = "<group>";
+		};
+		523357D92CDCFB61007A61F0 /* Cameras */ = {
+			isa = PBXGroup;
+			children = (
+				523357D82CDCFB61007A61F0 /* Camera.cpp */,
+			);
+			path = Cameras;
+			sourceTree = "<group>";
+		};
+		523357DB2CDCFB61007A61F0 /* Transform */ = {
+			isa = PBXGroup;
+			children = (
+				523357D92CDCFB61007A61F0 /* Cameras */,
+				523357DA2CDCFB61007A61F0 /* Transform.cpp */,
+			);
+			path = Transform;
+			sourceTree = "<group>";
+		};
+		523357DC2CDCFB61007A61F0 /* Core */ = {
+			isa = PBXGroup;
+			children = (
+				523357BD2CDCFB61007A61F0 /* Colliders */,
+				523357C22CDCFB61007A61F0 /* Control */,
+				523357C42CDCFB61007A61F0 /* Light */,
+				523357C82CDCFB61007A61F0 /* Model */,
+				523357CB2CDCFB61007A61F0 /* Nodes */,
+				523357CE2CDCFB61007A61F0 /* Players */,
+				523357D02CDCFB61007A61F0 /* Renderer */,
+				523357D42CDCFB61007A61F0 /* Shaders */,
+				523357D72CDCFB61007A61F0 /* Texture */,
+				523357DB2CDCFB61007A61F0 /* Transform */,
+			);
+			path = Core;
+			sourceTree = "<group>";
+		};
+		523357F52CDCFB61007A61F0 /* SnowLib */ = {
+			isa = PBXGroup;
+			children = (
+				52DDC9CC2CE158BA00D7E555 /* SnowView.h */,
+				523357DD2CDCFB61007A61F0 /* Camera.hpp */,
+				523357DE2CDCFB61007A61F0 /* Collider.hpp */,
+				523357DF2CDCFB61007A61F0 /* CollisionManager.hpp */,
+				523357E02CDCFB61007A61F0 /* Cube.hpp */,
+				523357E12CDCFB61007A61F0 /* DirectionalLight.hpp */,
+				523357E22CDCFB61007A61F0 /* Input.h */,
+				523357E32CDCFB61007A61F0 /* Mesh.hpp */,
+				523357E42CDCFB61007A61F0 /* MeshNode.hpp */,
+				523357E62CDCFB61007A61F0 /* Model.hpp */,
+				523357E72CDCFB61007A61F0 /* ModelTest.hpp */,
+				523357E82CDCFB61007A61F0 /* MovingCollider.hpp */,
+				523357E92CDCFB61007A61F0 /* Node.hpp */,
+				523357EA2CDCFB61007A61F0 /* OrthographicCamera.hpp */,
+				523357EB2CDCFB61007A61F0 /* PerspectiveCamera.hpp */,
+				523357EC2CDCFB61007A61F0 /* Renderer.hpp */,
+				523357ED2CDCFB61007A61F0 /* Snow.hpp */,
+				523357EE2CDCFB61007A61F0 /* SnowDefs.h */,
+				523357EF2CDCFB61007A61F0 /* SnowInputs.h */,
+				523357F02CDCFB61007A61F0 /* SnowSoup.hpp */,
+				523357F12CDCFB61007A61F0 /* SnowStructs.h */,
+				523357F22CDCFB61007A61F0 /* Texture.hpp */,
+				523357F32CDCFB61007A61F0 /* Transform.hpp */,
+				523357F42CDCFB61007A61F0 /* WindowDelegate.hpp */,
+			);
+			path = SnowLib;
+			sourceTree = "<group>";
+		};
+		523357F62CDCFB61007A61F0 /* include */ = {
+			isa = PBXGroup;
+			children = (
+				523357F52CDCFB61007A61F0 /* SnowLib */,
+			);
+			path = include;
+			sourceTree = "<group>";
+		};
+		523357FB2CDCFB61007A61F0 /* SnowLib */ = {
+			isa = PBXGroup;
+			children = (
+				523357DC2CDCFB61007A61F0 /* Core */,
+				523357F62CDCFB61007A61F0 /* include */,
+				523357F72CDCFB61007A61F0 /* Implementation.cpp */,
+				523357F92CDCFB61007A61F0 /* SnowLib.h */,
+				523357FA2CDCFB61007A61F0 /* SnowLib.m */,
+			);
+			path = SnowLib;
+			sourceTree = "<group>";
+		};
+		5233582E2CDCFB7F007A61F0 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				52DC22A12CDFDCDC0043D33D /* libz.a */,
+				52DC20722CDED1CC0043D33D /* libassimp.a */,
+				52DC20632CDE395C0043D33D /* assimp.framework */,
+				523358372CDCFBB6007A61F0 /* libccd.a */,
+				523358352CDCFB89007A61F0 /* Foundation.framework */,
+				523358332CDCFB83007A61F0 /* QuartzCore.framework */,
+				5233582F2CDCFB7F007A61F0 /* Metal.framework */,
+				523358302CDCFB7F007A61F0 /* MetalKit.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXHeadersBuildPhase section */
+		523355AC2CDCFAF5007A61F0 /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				523358262CDCFB61007A61F0 /* SnowStructs.h in Headers */,
+				523358132CDCFB61007A61F0 /* Collider.hpp in Headers */,
+				523358282CDCFB61007A61F0 /* Transform.hpp in Headers */,
+				5233581B2CDCFB61007A61F0 /* Model.hpp in Headers */,
+				523358152CDCFB61007A61F0 /* Cube.hpp in Headers */,
+				5233582C2CDCFB61007A61F0 /* SnowLib.h in Headers */,
+				5233581E2CDCFB61007A61F0 /* Node.hpp in Headers */,
+				523358232CDCFB61007A61F0 /* SnowDefs.h in Headers */,
+				523358122CDCFB61007A61F0 /* Camera.hpp in Headers */,
+				523358272CDCFB61007A61F0 /* Texture.hpp in Headers */,
+				523358172CDCFB61007A61F0 /* Input.h in Headers */,
+				523358292CDCFB61007A61F0 /* WindowDelegate.hpp in Headers */,
+				523358252CDCFB61007A61F0 /* SnowSoup.hpp in Headers */,
+				5233581D2CDCFB61007A61F0 /* MovingCollider.hpp in Headers */,
+				523358222CDCFB61007A61F0 /* Snow.hpp in Headers */,
+				523358142CDCFB61007A61F0 /* CollisionManager.hpp in Headers */,
+				523358212CDCFB61007A61F0 /* Renderer.hpp in Headers */,
+				523358192CDCFB61007A61F0 /* MeshNode.hpp in Headers */,
+				523358202CDCFB61007A61F0 /* PerspectiveCamera.hpp in Headers */,
+				523358182CDCFB61007A61F0 /* Mesh.hpp in Headers */,
+				523358162CDCFB61007A61F0 /* DirectionalLight.hpp in Headers */,
+				5233581C2CDCFB61007A61F0 /* ModelTest.hpp in Headers */,
+				52DDC9CF2CE158BA00D7E555 /* SnowView.h in Headers */,
+				5233581F2CDCFB61007A61F0 /* OrthographicCamera.hpp in Headers */,
+				523358242CDCFB61007A61F0 /* SnowInputs.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXHeadersBuildPhase section */
+
+/* Begin PBXNativeTarget section */
+		523355AF2CDCFAF5007A61F0 /* SnowLibMacOS */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 523355B42CDCFAF5007A61F0 /* Build configuration list for PBXNativeTarget "SnowLibMacOS" */;
+			buildPhases = (
+				523355AC2CDCFAF5007A61F0 /* Headers */,
+				523355AD2CDCFAF5007A61F0 /* Sources */,
+				523355AE2CDCFAF5007A61F0 /* Frameworks */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = SnowLibMacOS;
+			productName = SnowLibMacOS;
+			productReference = 523355B02CDCFAF5007A61F0 /* libSnowLibMacOS.a */;
+			productType = "com.apple.product-type.library.static";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		523355A82CDCFAF5007A61F0 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				BuildIndependentTargetsInParallel = 1;
+				LastUpgradeCheck = 1540;
+				TargetAttributes = {
+					523355AF2CDCFAF5007A61F0 = {
+						CreatedOnToolsVersion = 15.4;
+					};
+				};
+			};
+			buildConfigurationList = 523355AB2CDCFAF5007A61F0 /* Build configuration list for PBXProject "SnowLibMacOS" */;
+			compatibilityVersion = "Xcode 14.0";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 523355A72CDCFAF5007A61F0;
+			productRefGroup = 523355B12CDCFAF5007A61F0 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				523355AF2CDCFAF5007A61F0 /* SnowLibMacOS */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXSourcesBuildPhase section */
+		523355AD2CDCFAF5007A61F0 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				523358042CDCFB61007A61F0 /* Mesh.cpp in Sources */,
+				523358032CDCFB61007A61F0 /* Cube.cpp in Sources */,
+				523358072CDCFB61007A61F0 /* Node.cpp in Sources */,
+				5233580C2CDCFB61007A61F0 /* Shaders.metal in Sources */,
+				5233580F2CDCFB61007A61F0 /* Texture.cpp in Sources */,
+				5233582A2CDCFB61007A61F0 /* Implementation.cpp in Sources */,
+				523358112CDCFB61007A61F0 /* Transform.cpp in Sources */,
+				523358022CDCFB61007A61F0 /* DirectionalLight.cpp in Sources */,
+				5233580B2CDCFB61007A61F0 /* PhongShader.metal in Sources */,
+				523357FE2CDCFB61007A61F0 /* Input.mm in Sources */,
+				5233580A2CDCFB61007A61F0 /* Renderer.mm in Sources */,
+				523357FD2CDCFB61007A61F0 /* CollisionManager.cpp in Sources */,
+				523358062CDCFB61007A61F0 /* MeshNode.cpp in Sources */,
+				523358052CDCFB61007A61F0 /* Model.cpp in Sources */,
+				52DDC9CE2CE158BA00D7E555 /* SnowView.mm in Sources */,
+				523358002CDCFB61007A61F0 /* SnowSoup.mm in Sources */,
+				523358092CDCFB61007A61F0 /* MovingCollider.cpp in Sources */,
+				523358102CDCFB61007A61F0 /* Camera.cpp in Sources */,
+				523357FC2CDCFB61007A61F0 /* Collider.cpp in Sources */,
+				5233582D2CDCFB61007A61F0 /* SnowLib.m in Sources */,
+				5233580E2CDCFB61007A61F0 /* STBI_Implementation.cpp in Sources */,
+				523358082CDCFB61007A61F0 /* ModelTest.cpp in Sources */,
+				5233580D2CDCFB61007A61F0 /* Skybox.metal in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin XCBuildConfiguration section */
+		523355B22CDCFAF5007A61F0 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ASSETCATALOG_COMPILER_GENERATE_SWIFT_ASSET_SYMBOL_EXTENSIONS = YES;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				ENABLE_USER_SCRIPT_SANDBOXING = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu17;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				LOCALIZATION_PREFERS_STRING_CATALOGS = YES;
+				MACOSX_DEPLOYMENT_TARGET = 14.4;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = macosx;
+			};
+			name = Debug;
+		};
+		523355B32CDCFAF5007A61F0 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ASSETCATALOG_COMPILER_GENERATE_SWIFT_ASSET_SYMBOL_EXTENSIONS = YES;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_USER_SCRIPT_SANDBOXING = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu17;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				LOCALIZATION_PREFERS_STRING_CATALOGS = YES;
+				MACOSX_DEPLOYMENT_TARGET = 14.4;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				SDKROOT = macosx;
+			};
+			name = Release;
+		};
+		523355B52CDCFAF5007A61F0 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = BUVM85N7NV;
+				EXECUTABLE_PREFIX = lib;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)",
+				);
+				HEADER_SEARCH_PATHS = (
+					ccd/include,
+					"metal-cpp",
+					stb,
+					include,
+				);
+				LIBRARY_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/ccd/lib",
+					"$(PROJECT_DIR)",
+					/opt/homebrew/Cellar/zlib/1.3.1/lib,
+				);
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SKIP_INSTALL = NO;
+			};
+			name = Debug;
+		};
+		523355B62CDCFAF5007A61F0 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = BUVM85N7NV;
+				EXECUTABLE_PREFIX = lib;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)",
+				);
+				HEADER_SEARCH_PATHS = (
+					ccd/include,
+					"metal-cpp",
+					stb,
+					include,
+				);
+				LIBRARY_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/ccd/lib",
+					"$(PROJECT_DIR)",
+					/opt/homebrew/Cellar/zlib/1.3.1/lib,
+				);
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SKIP_INSTALL = NO;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		523355AB2CDCFAF5007A61F0 /* Build configuration list for PBXProject "SnowLibMacOS" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				523355B22CDCFAF5007A61F0 /* Debug */,
+				523355B32CDCFAF5007A61F0 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		523355B42CDCFAF5007A61F0 /* Build configuration list for PBXNativeTarget "SnowLibMacOS" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				523355B52CDCFAF5007A61F0 /* Debug */,
+				523355B62CDCFAF5007A61F0 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 523355A82CDCFAF5007A61F0 /* Project object */;
+}
