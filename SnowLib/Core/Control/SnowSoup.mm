@@ -7,7 +7,7 @@
 
 #include "SnowSoup.hpp"
 
-void SnowSoup::init() {
+void SnowSoup::init(MTKView *view) {
     CollisionManager* initCM = CollisionManager::getInstance();
     Input* inputen = Input::getInstance();
     
@@ -20,7 +20,15 @@ void SnowSoup::init() {
     cube->buildBuffers();
     
     allColliders = new std::vector<Collider*>();
-    renderer = new Renderer(device, allColliders);
+    renderer = new Renderer(device, allColliders, view);
+    this->view = view;
+    
+    setCameraAspect(view.drawableSize);
+    
+    [this->view setSampleCount: 2];
+    this->view.device = (__bridge id<MTLDevice>)device;
+    
+    onStart();
 }
 
 void SnowSoup::setView(MTKView *view) {
@@ -57,8 +65,9 @@ void SnowSoup::addNode(Node* newNode) {
     } while (sp >= 0);
 }
 
-void SnowSoup::run2() {
+void SnowSoup::run() {
     CollisionManager::getInstance()->collideAllBoxes(allColliders);
+    update();
     renderer->drawSetup(view);
     renderer->draw(view, sceneTree);
     renderer->endDraw(view);
@@ -68,4 +77,8 @@ void SnowSoup::setCameraAspect(CGSize size) {
     renderer->setCameraAspect(size.width / size.height);
     renderer->createDepthAndTargetTextures(size.width, size.height);
 }
+
+void SnowSoup::update() {}
+
+void SnowSoup::onStart() {}
 

@@ -21,7 +21,7 @@ void Cube::buildBuffers() {
     indexBuffer->didModifyRange(NS::Range::Make(0, indexBuffer->length()));
 }
 
-void Cube::Draw(MTL::RenderCommandEncoder* pEnc, Snow_Uniforms* uniforms, Snow_PhongUniforms* phongUniforms) {
+void Cube::Draw(MTL::RenderCommandEncoder* pEnc, Snow_Uniforms* uniforms, Snow_PhongUniforms* phongUniforms, Snow_FStates* allShaders) {
     pEnc->setVertexBuffer(vertexBuffer, 0, 0);
     
     uniforms->modelMatrix = TransformMatrix();

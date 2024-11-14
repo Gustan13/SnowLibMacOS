@@ -20,7 +20,7 @@ void Node::AddChild(Node* child) {
     childrenCount++;
 }
 
-void Node::Draw( MTL::RenderCommandEncoder* pEnc, Snow_Uniforms* uniforms, Snow_PhongUniforms* phongUniforms) {
+void Node::Draw( MTL::RenderCommandEncoder* pEnc, Snow_Uniforms* uniforms, Snow_PhongUniforms* phongUniforms, Snow_FStates* allShaders) {
 
 }
 

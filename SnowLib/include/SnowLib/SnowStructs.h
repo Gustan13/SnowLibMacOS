@@ -44,9 +44,21 @@ typedef struct {
     MTL::DepthStencilState* depthState;
 } Snow_ForwardState;
 
+typedef struct {
+    Snow_ForwardState colliderDebug;
+    Snow_ForwardState litTextured;
+    Snow_ForwardState litSolidColor;
+} Snow_FStates;
+
 typedef struct
 {
     double w, x, y, z;
 } Quaternion;
+
+typedef enum {
+    TEXTURE_LIT,
+    SOLID_COLOR_LIT,
+    DEBUG_COLLIDER
+} ShaderType;
 
 #endif /* SnowStructs_h */

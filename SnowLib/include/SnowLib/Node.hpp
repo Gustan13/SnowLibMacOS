@@ -27,7 +27,7 @@ public:
     Node();
     
     void AddChild(Node* child);
-    virtual void Draw( MTL::RenderCommandEncoder* pEnc, Snow_Uniforms* uniforms, Snow_PhongUniforms* phongUniforms );
+    virtual void Draw( MTL::RenderCommandEncoder* pEnc, Snow_Uniforms* uniforms, Snow_PhongUniforms* phongUniforms, Snow_FStates* allShaders );
     virtual void Update();
 };
 

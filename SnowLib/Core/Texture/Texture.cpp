@@ -5,7 +5,9 @@
 //  Created by Guilherme de Souza Barci on 27/08/24.
 //
 
+//#include <assimp/types.h>
 #include "Texture.hpp"
+#include <assimp/texture.h>
 
 Texture::Texture(MTL::Device* device) {
     this->device = device;
@@ -35,4 +37,23 @@ void Texture::importTexture(const char* filepath) {
     
     textureDescriptor->release();
     stbi_image_free(image);
+}
+
+void Texture::importTextureEmbedded(aiTexture* tex) {
+    width = tex->mWidth;
+    height = tex->mHeight;
+    
+    MTL::TextureDescriptor* textureDescriptor = MTL::TextureDescriptor::alloc()->init();
+    textureDescriptor->setPixelFormat(MTL::PixelFormatRGBA8Unorm);
+    textureDescriptor->setWidth(width);
+    textureDescriptor->setHeight(height);
+    
+    texture = device->newTexture(textureDescriptor);
+    
+    MTL::Region region = MTL::Region(0, 0, 0, width, height, 1);
+    NS::UInteger bytesPerRow = 4 * width;
+    
+    texture->replaceRegion(region, 0, tex->pcData, bytesPerRow);
+    
+    textureDescriptor->release();
 }

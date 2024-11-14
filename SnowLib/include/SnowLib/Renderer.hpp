@@ -28,12 +28,11 @@
 class Renderer
 {
 public:
-    Renderer( MTL::Device* pDevice, std::vector<Collider*>* allColliders );
+    Renderer( MTL::Device* pDevice, std::vector<Collider*>* allColliders, MTKView* view );
     ~Renderer();
     void            drawSetup( MTKView* view );
     void            initDraw( MTKView* view );
     void            draw( MTKView* view, Node* sceneTree );
-//    void            drawOctree( CA::MetalDrawable* drawable, Snow_PhongUniforms* pu );
     void            endDraw( MTKView* view );
     
     Snow_ForwardState       buildShaders(std::string vertex, std::string fragment);
@@ -86,6 +85,7 @@ private:
     
     Snow_SkyboxUniforms             *skyUniforms = new Snow_SkyboxUniforms;
     Transform                       *boneco = new Transform;
+    Snow_FStates*                   allShaders = new Snow_FStates;
     
     std::vector<Collider*>*          allColliders;
 };

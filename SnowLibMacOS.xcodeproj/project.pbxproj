@@ -7,6 +7,12 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		5200C8D62CE22EF600E57524 /* SnowFiles.hpp in Headers */ = {isa = PBXBuildFile; fileRef = 5200C8D52CE22EF600E57524 /* SnowFiles.hpp */; settings = {ATTRIBUTES = (Public, ); }; };
+		5200C8D72CE22EF600E57524 /* SnowFiles.mm in Sources */ = {isa = PBXBuildFile; fileRef = 5200C8D42CE22EF600E57524 /* SnowFiles.mm */; };
+		5200C8DA2CE231E700E57524 /* SnowDelegate.h in Headers */ = {isa = PBXBuildFile; fileRef = 5200C8D92CE231E700E57524 /* SnowDelegate.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		5200C8DB2CE231E700E57524 /* SnowDelegate.mm in Sources */ = {isa = PBXBuildFile; fileRef = 5200C8D82CE231E700E57524 /* SnowDelegate.mm */; };
+		5200C8E32CE39A8400E57524 /* SnowMaterial.hpp in Headers */ = {isa = PBXBuildFile; fileRef = 5200C8E22CE39A8400E57524 /* SnowMaterial.hpp */; settings = {ATTRIBUTES = (Public, ); }; };
+		5200C8E42CE39A8400E57524 /* SnowMaterial.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 5200C8E12CE39A8400E57524 /* SnowMaterial.cpp */; };
 		523357FC2CDCFB61007A61F0 /* Collider.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 523357BB2CDCFB61007A61F0 /* Collider.cpp */; };
 		523357FD2CDCFB61007A61F0 /* CollisionManager.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 523357BC2CDCFB61007A61F0 /* CollisionManager.cpp */; };
 		523357FE2CDCFB61007A61F0 /* Input.mm in Sources */ = {isa = PBXBuildFile; fileRef = 523357BE2CDCFB61007A61F0 /* Input.mm */; };
@@ -14,10 +20,10 @@
 		523358022CDCFB61007A61F0 /* DirectionalLight.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 523357C32CDCFB61007A61F0 /* DirectionalLight.cpp */; };
 		523358032CDCFB61007A61F0 /* Cube.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 523357C52CDCFB61007A61F0 /* Cube.cpp */; };
 		523358042CDCFB61007A61F0 /* Mesh.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 523357C62CDCFB61007A61F0 /* Mesh.cpp */; };
-		523358052CDCFB61007A61F0 /* Model.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 523357C72CDCFB61007A61F0 /* Model.cpp */; };
+		523358052CDCFB61007A61F0 /* Model.mm in Sources */ = {isa = PBXBuildFile; fileRef = 523357C72CDCFB61007A61F0 /* Model.mm */; };
 		523358062CDCFB61007A61F0 /* MeshNode.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 523357C92CDCFB61007A61F0 /* MeshNode.cpp */; };
 		523358072CDCFB61007A61F0 /* Node.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 523357CA2CDCFB61007A61F0 /* Node.cpp */; };
-		523358082CDCFB61007A61F0 /* ModelTest.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 523357CC2CDCFB61007A61F0 /* ModelTest.cpp */; };
+		523358082CDCFB61007A61F0 /* ModelTest.mm in Sources */ = {isa = PBXBuildFile; fileRef = 523357CC2CDCFB61007A61F0 /* ModelTest.mm */; };
 		523358092CDCFB61007A61F0 /* MovingCollider.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 523357CD2CDCFB61007A61F0 /* MovingCollider.cpp */; };
 		5233580A2CDCFB61007A61F0 /* Renderer.mm in Sources */ = {isa = PBXBuildFile; fileRef = 523357CF2CDCFB61007A61F0 /* Renderer.mm */; };
 		5233580B2CDCFB61007A61F0 /* PhongShader.metal in Sources */ = {isa = PBXBuildFile; fileRef = 523357D12CDCFB61007A61F0 /* PhongShader.metal */; };
@@ -65,6 +71,12 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		5200C8D42CE22EF600E57524 /* SnowFiles.mm */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.objcpp; path = SnowFiles.mm; sourceTree = "<group>"; };
+		5200C8D52CE22EF600E57524 /* SnowFiles.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = SnowFiles.hpp; sourceTree = "<group>"; };
+		5200C8D82CE231E700E57524 /* SnowDelegate.mm */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.objcpp; path = SnowDelegate.mm; sourceTree = "<group>"; };
+		5200C8D92CE231E700E57524 /* SnowDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SnowDelegate.h; sourceTree = "<group>"; };
+		5200C8E12CE39A8400E57524 /* SnowMaterial.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = SnowMaterial.cpp; sourceTree = "<group>"; };
+		5200C8E22CE39A8400E57524 /* SnowMaterial.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = SnowMaterial.hpp; sourceTree = "<group>"; };
 		523355B02CDCFAF5007A61F0 /* libSnowLibMacOS.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libSnowLibMacOS.a; sourceTree = BUILT_PRODUCTS_DIR; };
 		523357BB2CDCFB61007A61F0 /* Collider.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = Collider.cpp; sourceTree = "<group>"; };
 		523357BC2CDCFB61007A61F0 /* CollisionManager.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = CollisionManager.cpp; sourceTree = "<group>"; };
@@ -73,10 +85,10 @@
 		523357C32CDCFB61007A61F0 /* DirectionalLight.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = DirectionalLight.cpp; sourceTree = "<group>"; };
 		523357C52CDCFB61007A61F0 /* Cube.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = Cube.cpp; sourceTree = "<group>"; };
 		523357C62CDCFB61007A61F0 /* Mesh.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = Mesh.cpp; sourceTree = "<group>"; };
-		523357C72CDCFB61007A61F0 /* Model.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = Model.cpp; sourceTree = "<group>"; };
+		523357C72CDCFB61007A61F0 /* Model.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; path = Model.mm; sourceTree = "<group>"; };
 		523357C92CDCFB61007A61F0 /* MeshNode.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = MeshNode.cpp; sourceTree = "<group>"; };
 		523357CA2CDCFB61007A61F0 /* Node.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = Node.cpp; sourceTree = "<group>"; };
-		523357CC2CDCFB61007A61F0 /* ModelTest.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = ModelTest.cpp; sourceTree = "<group>"; };
+		523357CC2CDCFB61007A61F0 /* ModelTest.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; path = ModelTest.mm; sourceTree = "<group>"; };
 		523357CD2CDCFB61007A61F0 /* MovingCollider.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = MovingCollider.cpp; sourceTree = "<group>"; };
 		523357CF2CDCFB61007A61F0 /* Renderer.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; path = Renderer.mm; sourceTree = "<group>"; };
 		523357D12CDCFB61007A61F0 /* PhongShader.metal */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.metal; path = PhongShader.metal; sourceTree = "<group>"; };
@@ -174,6 +186,8 @@
 				52DDC9CD2CE158BA00D7E555 /* SnowView.mm */,
 				523357BE2CDCFB61007A61F0 /* Input.mm */,
 				523357C02CDCFB61007A61F0 /* SnowSoup.mm */,
+				5200C8D42CE22EF600E57524 /* SnowFiles.mm */,
+				5200C8D82CE231E700E57524 /* SnowDelegate.mm */,
 			);
 			path = Control;
 			sourceTree = "<group>";
@@ -191,7 +205,7 @@
 			children = (
 				523357C52CDCFB61007A61F0 /* Cube.cpp */,
 				523357C62CDCFB61007A61F0 /* Mesh.cpp */,
-				523357C72CDCFB61007A61F0 /* Model.cpp */,
+				523357C72CDCFB61007A61F0 /* Model.mm */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -208,7 +222,7 @@
 		523357CE2CDCFB61007A61F0 /* Players */ = {
 			isa = PBXGroup;
 			children = (
-				523357CC2CDCFB61007A61F0 /* ModelTest.cpp */,
+				523357CC2CDCFB61007A61F0 /* ModelTest.mm */,
 				523357CD2CDCFB61007A61F0 /* MovingCollider.cpp */,
 			);
 			path = Players;
@@ -236,6 +250,7 @@
 			isa = PBXGroup;
 			children = (
 				523357D52CDCFB61007A61F0 /* STBI_Implementation.cpp */,
+				5200C8E12CE39A8400E57524 /* SnowMaterial.cpp */,
 				523357D62CDCFB61007A61F0 /* Texture.cpp */,
 			);
 			path = Texture;
@@ -278,6 +293,8 @@
 		523357F52CDCFB61007A61F0 /* SnowLib */ = {
 			isa = PBXGroup;
 			children = (
+				5200C8D92CE231E700E57524 /* SnowDelegate.h */,
+				5200C8D52CE22EF600E57524 /* SnowFiles.hpp */,
 				52DDC9CC2CE158BA00D7E555 /* SnowView.h */,
 				523357DD2CDCFB61007A61F0 /* Camera.hpp */,
 				523357DE2CDCFB61007A61F0 /* Collider.hpp */,
@@ -302,6 +319,7 @@
 				523357F22CDCFB61007A61F0 /* Texture.hpp */,
 				523357F32CDCFB61007A61F0 /* Transform.hpp */,
 				523357F42CDCFB61007A61F0 /* WindowDelegate.hpp */,
+				5200C8E22CE39A8400E57524 /* SnowMaterial.hpp */,
 			);
 			path = SnowLib;
 			sourceTree = "<group>";
@@ -371,7 +389,10 @@
 				523358162CDCFB61007A61F0 /* DirectionalLight.hpp in Headers */,
 				5233581C2CDCFB61007A61F0 /* ModelTest.hpp in Headers */,
 				52DDC9CF2CE158BA00D7E555 /* SnowView.h in Headers */,
+				5200C8D62CE22EF600E57524 /* SnowFiles.hpp in Headers */,
+				5200C8DA2CE231E700E57524 /* SnowDelegate.h in Headers */,
 				5233581F2CDCFB61007A61F0 /* OrthographicCamera.hpp in Headers */,
+				5200C8E32CE39A8400E57524 /* SnowMaterial.hpp in Headers */,
 				523358242CDCFB61007A61F0 /* SnowInputs.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -433,12 +454,14 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				5200C8D72CE22EF600E57524 /* SnowFiles.mm in Sources */,
 				523358042CDCFB61007A61F0 /* Mesh.cpp in Sources */,
 				523358032CDCFB61007A61F0 /* Cube.cpp in Sources */,
 				523358072CDCFB61007A61F0 /* Node.cpp in Sources */,
 				5233580C2CDCFB61007A61F0 /* Shaders.metal in Sources */,
 				5233580F2CDCFB61007A61F0 /* Texture.cpp in Sources */,
 				5233582A2CDCFB61007A61F0 /* Implementation.cpp in Sources */,
+				5200C8E42CE39A8400E57524 /* SnowMaterial.cpp in Sources */,
 				523358112CDCFB61007A61F0 /* Transform.cpp in Sources */,
 				523358022CDCFB61007A61F0 /* DirectionalLight.cpp in Sources */,
 				5233580B2CDCFB61007A61F0 /* PhongShader.metal in Sources */,
@@ -446,15 +469,16 @@
 				5233580A2CDCFB61007A61F0 /* Renderer.mm in Sources */,
 				523357FD2CDCFB61007A61F0 /* CollisionManager.cpp in Sources */,
 				523358062CDCFB61007A61F0 /* MeshNode.cpp in Sources */,
-				523358052CDCFB61007A61F0 /* Model.cpp in Sources */,
+				523358052CDCFB61007A61F0 /* Model.mm in Sources */,
 				52DDC9CE2CE158BA00D7E555 /* SnowView.mm in Sources */,
 				523358002CDCFB61007A61F0 /* SnowSoup.mm in Sources */,
 				523358092CDCFB61007A61F0 /* MovingCollider.cpp in Sources */,
 				523358102CDCFB61007A61F0 /* Camera.cpp in Sources */,
 				523357FC2CDCFB61007A61F0 /* Collider.cpp in Sources */,
+				5200C8DB2CE231E700E57524 /* SnowDelegate.mm in Sources */,
 				5233582D2CDCFB61007A61F0 /* SnowLib.m in Sources */,
 				5233580E2CDCFB61007A61F0 /* STBI_Implementation.cpp in Sources */,
-				523358082CDCFB61007A61F0 /* ModelTest.cpp in Sources */,
+				523358082CDCFB61007A61F0 /* ModelTest.mm in Sources */,
 				5233580D2CDCFB61007A61F0 /* Skybox.metal in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

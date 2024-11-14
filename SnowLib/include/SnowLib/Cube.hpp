@@ -20,7 +20,7 @@ public:
         isPrimitive = true;
     }
     
-    void Draw( MTL::RenderCommandEncoder* pEnc, Snow_Uniforms* uniforms, Snow_PhongUniforms* phongUniforms ) override;
+    void Draw( MTL::RenderCommandEncoder* pEnc, Snow_Uniforms* uniforms, Snow_PhongUniforms* phongUniforms, Snow_FStates* allShaders ) override;
     
     MTL::Device* device;
     MTL::Buffer* vertexBuffer;

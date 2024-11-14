@@ -45,6 +45,20 @@ v2f vertex vertexMain( uint vertexId [[vertex_id]],
     return o;
 }
 
+v2f vertex vertexSolidMain( uint vertexId [[vertex_id]],
+                       device const float3* positions [[buffer(0)]],
+                      device const float3* normals [[buffer(1)]],
+                        constant Uniforms &uniforms[[buffer(2)]])
+{
+    float4 fixedInPosition = float4( positions[ vertexId ], 1.0);
+    float4 position = uniforms.projectionMatrix * uniforms.viewMatrix * uniforms.modelMatrix * fixedInPosition;
+    
+    v2f o;
+    o.position = position;
+    o.normal = (uniforms.rotationMatrix * float4(normals[vertexId], 1.0)).xyz;
+    return o;
+}
+
 v1f vertex vertexPr( uint vertexId [[vertex_id]],
                        device const float3* positions [[buffer(0)]],
                         constant Uniforms &uniforms[[buffer(1)]])
