@@ -10,12 +10,14 @@
 
 #include <Metal/Metal.hpp>
 #include <stb_image.h>
+#include <assimp/texture.h>
 
 class Texture {
 public:
     Texture (MTL::Device* device);
     ~Texture();
     void importTexture(const char* filepath);
+    void importTextureEmbedded(aiTexture* tex);
     
     MTL::Texture* texture;
     int width, height, channels;

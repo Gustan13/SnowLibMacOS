@@ -16,6 +16,7 @@ public:
     MTL::Buffer     *indexBuffer    = nullptr;
     UInt32          *indices        = nullptr;
     size_t          indexAmount     = 0;
+    unsigned int    materialIndex   = 0;
 };
 
 

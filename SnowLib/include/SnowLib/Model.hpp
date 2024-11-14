@@ -10,6 +10,7 @@
 
 #include <Metal/Metal.hpp>
 #include <simd/simd.h>
+#include <string.h>
 
 #include <assimp/Importer.hpp>
 #include <assimp/scene.h>
@@ -18,18 +19,25 @@
 #include "Mesh.hpp"
 #include "SnowStructs.h"
 #include "Texture.hpp"
+#include "SnowMaterial.hpp"
 #include "Transform.hpp"
 #include "MeshNode.hpp"
+#include "SnowFiles.hpp"
+
+#include <Cocoa/Cocoa.h>
 
 class Model : public Transform {
 public:
     Model(MTL::Device* device);
     void importModel(const std::string filename);
     void importTexture(const char* filepath);
-    void render(MTL::RenderCommandEncoder* pEnc, Snow_Uniforms* uniforms, Snow_PhongUniforms* phongUniforms);
+    void renderTL(MTL::RenderCommandEncoder* pEnc, Snow_Uniforms* uniforms, Snow_PhongUniforms* phongUniforms, Snow_FStates* allShaders);
+    void renderSCL(MTL::RenderCommandEncoder* pEnc, Snow_Uniforms* uniforms, Snow_PhongUniforms* phongUniforms);
     
-    void Draw( MTL::RenderCommandEncoder* pEnc, Snow_Uniforms* uniforms, Snow_PhongUniforms* phongUniforms ) override;
+    void Draw( MTL::RenderCommandEncoder* pEnc, Snow_Uniforms* uniforms, Snow_PhongUniforms* phongUniforms, Snow_FStates* allShaders ) override;
     MeshNode* baseNode;
+    ShaderType type = TEXTURE_LIT;
+    simd_float4 color = {0.f,0.f,0.f,0.f};
 private:
     MTL::Device* device;
     MTL::Buffer* vertexBuffer;
@@ -49,12 +57,14 @@ private:
     size_t totalVertexAmount = 0;
     
     Texture* texture = nullptr;
+    std::vector<SnowMaterial> materials;
     
     void readModelNodeTree(MeshNode* node, aiNode* assimpNode, const aiScene* scene, aiMatrix4x4 carriedTransform);
     void setMesh(Mesh* mesh, aiMesh* assimpMesh, const aiScene* scene);
     void setMeshNodeTransformation(aiMatrix4x4 transform, MeshNode* node);
     void getVertexAmount(const aiScene* scene);
     
+    void buildMaterials(const aiScene* scene);
     void buildBuffers();
 };
 

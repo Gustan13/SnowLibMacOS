@@ -30,7 +30,7 @@ public:
     virtual void collidedCallback(Collider* other);
     
     void setCollidersPtr(std::vector<Collider*>* allColliders);
-    void Draw( MTL::RenderCommandEncoder* pEnc, Snow_Uniforms* uniforms, Snow_PhongUniforms* phongUniforms ) override;
+    void Draw( MTL::RenderCommandEncoder* pEnc, Snow_Uniforms* uniforms, Snow_PhongUniforms* phongUniforms, Snow_FStates* allShaders ) override;
     void setCubeColor(float r, float g, float b);
     
 private:

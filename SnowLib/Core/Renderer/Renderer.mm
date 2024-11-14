@@ -7,7 +7,7 @@
 
 #include "Renderer.hpp"
 
-Renderer::Renderer( MTL::Device* pDevice, std::vector<Collider*>* allColliders )
+Renderer::Renderer( MTL::Device* pDevice, std::vector<Collider*>* allColliders, MTKView*view )
 : _pDevice( pDevice->retain() )
 {
     this->allColliders = allColliders;
@@ -16,6 +16,13 @@ Renderer::Renderer( MTL::Device* pDevice, std::vector<Collider*>* allColliders )
     Snow_ForwardState state1 = buildShaders("vertexMain", "fragmentPhong");
     Snow_ForwardState state2 = buildShaders("vertexSkybox", "fragmentSkybox");
     Snow_ForwardState state3 = buildShaders("vertexPr", "fragmentPr");
+    Snow_ForwardState state4 = buildShaders("vertexSolidMain", "fragmentSolidPhong");
+    
+    allShaders->colliderDebug = state3;
+    allShaders->litTextured = state1;
+    allShaders->litSolidColor = state4;
+    
+//    assert(allShaders->litTextured != NULL);
     
     _pPSO = state1.pipelineState;
     _pDSS = state1.depthState;
@@ -30,7 +37,8 @@ Renderer::Renderer( MTL::Device* pDevice, std::vector<Collider*>* allColliders )
     
     buildSphere();
     
-    createDepthAndTargetTextures(512*3, 512*3);
+//    createDepthAndTargetTextures(view.frame.size.width, view.frame.size.height);
+//    setCameraAspect(view.frame.size.width/view.frame.size.height);
 }
 
 Renderer::~Renderer()
@@ -51,6 +59,7 @@ Renderer::~Renderer()
     delete uniforms;
     delete camera;
     delete skyUniforms;
+    delete allShaders;
 }
 
 void Renderer::setCameraAspect(float aspect){
@@ -221,6 +230,15 @@ Snow_ForwardState Renderer::buildShaders(std::string vertex, std::string fragmen
     pDesc->setRasterSampleCount(2);
     pDesc->setDepthAttachmentPixelFormat(MTL::PixelFormatDepth32Float);
 //    pDesc->setColor
+    
+    MTL::RenderPipelineColorAttachmentDescriptor* rbffa = pDesc->colorAttachments()->object(0);
+    rbffa->setBlendingEnabled(true);
+    rbffa->setRgbBlendOperation(MTL::BlendOperationAdd);
+    rbffa->setAlphaBlendOperation(MTL::BlendOperationAdd);
+    rbffa->setSourceRGBBlendFactor(MTL::BlendFactorSourceAlpha);
+    rbffa->setSourceAlphaBlendFactor(MTL::BlendFactorSourceAlpha);
+    rbffa->setDestinationRGBBlendFactor(MTL::BlendFactorOneMinusSourceAlpha);
+    rbffa->setDestinationAlphaBlendFactor(MTL::BlendFactorOneMinusSourceAlpha);
 
     Snow_ForwardState state = Snow_ForwardState();
     state.pipelineState = _pDevice->newRenderPipelineState( pDesc, &pError );
@@ -359,20 +377,20 @@ void Renderer::draw( MTKView* view, Node* sceneTree ) {
 //            col->previousPosition = col->position;
 //        }
         nodeStack[stackPtr - 1]->Update();
-        if (nodeStack[stackPtr - 1]->isPrimitive) {
-            pEnc->setRenderPipelineState(_pPSO3);
-            pEnc->setCullMode(MTL::CullModeBack);
-            pEnc->setFrontFacingWinding(MTL::WindingCounterClockwise);
-            pEnc->setDepthStencilState(_pDSS3);
-        }
-        else {
-            pEnc->setRenderPipelineState(_pPSO);
-            pEnc->setCullMode(MTL::CullModeBack);
-            pEnc->setFrontFacingWinding(MTL::WindingCounterClockwise);
-            pEnc->setDepthStencilState(_pDSS);
-        }
+//        if (nodeStack[stackPtr - 1]->isPrimitive) {
+//            pEnc->setRenderPipelineState(_pPSO3);
+//            pEnc->setCullMode(MTL::CullModeBack);
+//            pEnc->setFrontFacingWinding(MTL::WindingCounterClockwise);
+//            pEnc->setDepthStencilState(_pDSS3);
+//        }
+//        else {
+//            pEnc->setRenderPipelineState(_pPSO);
+//            pEnc->setCullMode(MTL::CullModeBack);
+//            pEnc->setFrontFacingWinding(MTL::WindingCounterClockwise);
+//            pEnc->setDepthStencilState(_pDSS);
+//        }
         
-        nodeStack[stackPtr - 1]->Draw( pEnc, uniforms, phongUniforms );
+        nodeStack[stackPtr - 1]->Draw( pEnc, uniforms, phongUniforms, allShaders );
         
         currentNode = nodeStack[stackPtr - 1];
         nodeStack[stackPtr - 1] = nullptr;

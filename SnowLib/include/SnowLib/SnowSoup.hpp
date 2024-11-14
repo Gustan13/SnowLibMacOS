@@ -27,36 +27,26 @@
 
 class SnowSoup{
 public:
-    void init();
-//    void run();
-    void run2();
+    void init(MTKView *view);
+    void run();
     
     void addNode(Node* newNode);
     void setView(MTKView *view);
     void setCameraAspect(CGSize size);
+    virtual void update();
+    virtual void onStart();
     
     MTL::Device* device;
-    
-//    Input* input;
 private:
-//    void initApp();
     void initDevice();
     
-//    void initWindow(NSSize windowSize, NSString* windowName);
-//    void initWindow(NSSize windowSize);
-//    void initWindow();
-    
     Node* sceneTree = nullptr;
-    
-//    NSWindow* metalWindow;
-
     CAMetalLayer* metalLayer;
     
     Renderer* renderer;
     
     std::vector<Collider*>* allColliders = nullptr;
     
-//    OcNode* baseOcNode = nullptr;
     float deltaTime;
     
     MTKView* view = nullptr;

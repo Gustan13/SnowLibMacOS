@@ -7,12 +7,12 @@
 
 #include "Collider.hpp"
 
-void Collider::Draw( MTL::RenderCommandEncoder* pEnc, Snow_Uniforms* uniforms, Snow_PhongUniforms* phongUniforms ) {
+void Collider::Draw( MTL::RenderCommandEncoder* pEnc, Snow_Uniforms* uniforms, Snow_PhongUniforms* phongUniforms, Snow_FStates* allShaders ) {
     myCube->scale = scale;
     myCube->rotation = rotation;
     myCube->position = position;
     myCube->color = color;
-    myCube->Draw(pEnc, uniforms, phongUniforms);
+    myCube->Draw(pEnc, uniforms, phongUniforms, allShaders);
     setCubeColor(1.f, 0.f, 0.f);
 }
 
