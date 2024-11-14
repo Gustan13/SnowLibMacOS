@@ -29,12 +29,14 @@
 class Model : public Transform {
 public:
     Model(MTL::Device* device);
+    Model(Model& model);
     void importModel(const std::string filename);
     void importTexture(const char* filepath);
     void renderTL(MTL::RenderCommandEncoder* pEnc, Snow_Uniforms* uniforms, Snow_PhongUniforms* phongUniforms, Snow_FStates* allShaders);
     void renderSCL(MTL::RenderCommandEncoder* pEnc, Snow_Uniforms* uniforms, Snow_PhongUniforms* phongUniforms);
     
     void Draw( MTL::RenderCommandEncoder* pEnc, Snow_Uniforms* uniforms, Snow_PhongUniforms* phongUniforms, Snow_FStates* allShaders ) override;
+    
     MeshNode* baseNode;
     ShaderType type = TEXTURE_LIT;
     simd_float4 color = {0.f,0.f,0.f,0.f};
@@ -44,7 +46,7 @@ private:
     MTL::Buffer* textureBuffer;
     MTL::Buffer* normalsBuffer;
     
-    Mesh** meshes;
+//    Mesh** meshes;
 //    MeshNode* baseNode;
     simd::float2* textureVertices = nullptr;
     simd::float3* vertices = nullptr;

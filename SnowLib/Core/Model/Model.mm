@@ -11,7 +11,47 @@ Model::Model(MTL::Device* device) {
     this->device = device;
     
     texture = new Texture(device);
-//    texture->importTexture("Models/textures.png");
+}
+
+Model::Model(Model& model) {
+    // Copying simple data
+    isTransform = model.isTransform;
+    isPrimitive = model.isPrimitive;
+    isCollider = model.isCollider;
+    childrenCount = model.childrenCount;
+    
+    type = model.type;
+    color = model.color;
+    totalVertexAmount = model.totalVertexAmount;
+    numMeshes = model.numMeshes;
+    numVertices = model.numVertices;
+    numTextVertices = model.numTextVertices;
+    device = model.device;
+    materials = model.materials;
+    
+    // Copying arrays
+    textureVertices = (simd::float2*)malloc(sizeof(simd::float2) * numTextVertices);
+    vertices = (simd::float3*)malloc(sizeof(simd::float3) * numVertices);
+    normals = (simd::float3*)malloc(sizeof(simd::float3) * numVertices);
+    
+    memcpy(textureVertices, model.textureVertices, sizeof(simd::float2) * numTextVertices);
+    memcpy(vertices, model.vertices, sizeof(simd::float3) * numVertices);
+    memcpy(normals, model.normals, sizeof(simd::float3) * numVertices);
+    
+    // Copying buffers
+    const size_t sizeOfVertexBuffer = numVertices * sizeof(simd::float3);
+    const size_t sizeOfNormalBuffer = sizeOfVertexBuffer;
+    const size_t sizeOfTxtVtxBuffer = numTextVertices * sizeof(simd::float2);
+    
+    normalsBuffer = device->newBuffer(sizeOfNormalBuffer, MTL::ResourceStorageModeManaged);
+    vertexBuffer = device->newBuffer(sizeOfVertexBuffer, MTL::ResourceStorageModeManaged);
+    textureBuffer = device->newBuffer(sizeOfTxtVtxBuffer, MTL::ResourceStorageModeManaged);
+    
+    memcpy(normalsBuffer->contents(), normals, sizeOfNormalBuffer);
+    memcpy(vertexBuffer->contents(), vertices, sizeOfVertexBuffer);
+    memcpy(textureBuffer->contents(), textureVertices, sizeOfTxtVtxBuffer);
+    
+    baseNode = new MeshNode(*model.baseNode, device);
 }
 
 void Model::importTexture(const char* filepath) {
@@ -78,17 +118,12 @@ void Model::readModelNodeTree(MeshNode* node, aiNode* assimpNode, const aiScene*
             node->meshes[i] = currentSnowMesh;
         }
     }
-//    newTransform = carriedTransform;
-//    newTransform *= assimpNode->mTransformation;
+    
     newTransform = assimpNode->mTransformation;
     memcpy(node->name, assimpNode->mName.data, sizeof(char) * assimpNode->mName.length);
     
     setMeshNodeTransformation(newTransform, node);
     node->extractRotation();
-    
-//    printf("%lf %lf %lf\n", node->rotation.x, node->rotation.y, node->rotation.z);
-    
-//    printf("%d\n", assimpNode->mNumChildren);
     
     for (int i = 0; i < assimpNode->mNumChildren; i++) {
         newNode = new MeshNode;

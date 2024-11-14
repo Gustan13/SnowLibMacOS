@@ -7,6 +7,54 @@
 
 #include "MeshNode.hpp"
 
+MeshNode::MeshNode() {}
+
+MeshNode::MeshNode(MeshNode& meshNode, MTL::Device* device) {
+    isTransform = meshNode.isTransform;
+    isPrimitive = meshNode.isPrimitive;
+    isCollider = meshNode.isCollider;
+    
+    position = meshNode.position;
+    rotation = meshNode.rotation;
+    scale = meshNode.scale;
+    
+    meshCount = meshNode.meshCount;
+    transformation = meshNode.transformation;
+    localTransformation = meshNode.localTransformation;
+    rotationMatrix = meshNode.rotationMatrix;
+    
+    const size_t sizeOfMeshArray = sizeof(Mesh*) * meshCount;
+    size_t sizeOfIndexArray;
+    
+    meshes = (Mesh**)malloc(sizeOfMeshArray);
+    
+    for (int i = 0; i < meshCount; ++i) {
+        sizeOfIndexArray = sizeof(UInt32) * meshNode.meshes[i]->indexAmount;
+        meshes[i] = new Mesh;
+        meshes[i]->materialIndex = meshNode.meshes[i]->materialIndex;
+        meshes[i]->indexAmount = meshNode.meshes[i]->indexAmount;
+        meshes[i]->indices = (UInt32*)malloc(sizeOfIndexArray);
+        meshes[i]->indexBuffer = device->newBuffer(sizeOfIndexArray, MTL::StorageModeManaged);
+
+        memcpy(meshes[i]->indices, meshNode.meshes[i]->indices, sizeOfIndexArray);
+        memcpy(meshes[i]->indexBuffer->contents(), meshNode.meshes[i]->indexBuffer->contents(), sizeOfIndexArray);
+    }
+    
+//    childrenCount = meshNode.childrenCount;
+    for (int i = 0; i < meshNode.childrenCount; ++i) {
+        MeshNode* childPtr = static_cast<MeshNode*>(meshNode.children[i]);
+        if (childPtr == nullptr)
+            printf("ChildPtr is NULL\n");
+        MeshNode* childCopy = new MeshNode(*childPtr, device);
+        if (childCopy == nullptr)
+            printf("ChildCopy is NULL\n");
+        AddChild(childCopy);
+    }
+    
+//    childrenCount = meshNode.childrenCount;
+    memcpy(name, meshNode.name, sizeof(char) * 1024);
+}
+
 void MeshNode::extractRotation(){
     simd::float4x4 rotationMatrix = transformation;
     double syn;
